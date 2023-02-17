@@ -1,0 +1,26 @@
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    ens18:
+      dhcp4: no
+      addresses:
+        - 10.10.10.6/24
+      gateway4: 10.10.10.1
+      nameservers:
+          addresses: [8.8.8.8, 1.1.1.1]
+
+    ens19:
+      dhcp4: no
+      addresses:
+        - 172.31.100.6/24
+      #gateway4: 172.31.100.1
+      nameservers:
+          addresses: [8.8.8.8, 1.1.1.1]
+
+
+    ens20:
+      dhcp4: no
+      addresses:
+        - 192.168.100.32/24
+      mtu: 1400
